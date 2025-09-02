@@ -68,16 +68,20 @@ def main(page: ft.Page):
         )
 
         dialog = ft.AlertDialog(
+            modal=True,  # prevent clicks outside from closing it
             title=ft.Text("Application Information"),
             content=ft.Text(info_text),
-            actions=[ft.TextButton("Close", on_click=lambda e: close_dialog(dialog))]
+            actions=[
+                ft.TextButton("Close", on_click=lambda e: close_dialog())
+            ],
         )
-        page.dialog = dialog
+
+        page.overlay.append(dialog)
         dialog.open = True
         page.update()
 
-    def close_dialog(dialog):
-        dialog.open = False
+    def close_dialog():
+        page.dialog.open = False
         page.update()
 
     # Buttons
