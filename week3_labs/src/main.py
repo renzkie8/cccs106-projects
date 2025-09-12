@@ -72,12 +72,12 @@ def main(page: ft.Page):
         actions=[ft.TextButton("OK", on_click=lambda e: close_dialog(database_error_dialog))]
     )
 
-    # Register dialogs in overlay (required for some Flet versions)
+    # Register dialogs in overlay
     page.overlay.extend([success_dialog, failure_dialog, invalid_input_dialog, database_error_dialog])
 
     # --- Login logic ---
     def login_click(e):
-        print("Login button clicked!")  
+        print("Login button clicked!")  # DEBUG
 
         if not username.value or not password.value:
             invalid_input_dialog.open = True
@@ -95,7 +95,7 @@ def main(page: ft.Page):
             cursor.close()
             conn.close()
 
-            print("Query result:", result)  
+            print("Query result:", result)  # DEBUG
 
             if result:
                 success_dialog.content = ft.Text(f"Welcome, {username.value}!", text_align=ft.TextAlign.CENTER)
@@ -106,7 +106,7 @@ def main(page: ft.Page):
             page.update()
 
         except mysql.connector.Error as err:
-            print("Database error:", err) 
+            print("Database error:", err)  # DEBUG
             database_error_dialog.open = True
             page.update()
 
