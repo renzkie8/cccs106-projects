@@ -18,7 +18,9 @@ Academic Year 2025-2026
 - `week2_labs/hello_flet.py` - First Flet GUI application
 - `week2_labs/personal_info_gui.py` - Enhanced personal information manager
 - `week2_labs/enhanced_calculator.py` - GUI calculator (coming soon)
+### Week 3 Labs
 
+### Week 4 Labs
 ### Module 1 Final Project
 - `module1_final/` - Final integrated project (TBD)
 
