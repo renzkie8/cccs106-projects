@@ -2,11 +2,23 @@
 ## Project Structure
 
 contact_book_app/
-├── main.py # Entry point of the app (UI + event handling)
-├── app_logic.py # Core logic: add, edit, delete, search contacts
-├── database.py # SQLite database initialization and queries
-├── requirements.txt # dependencies if you export them
-└── README.md # Documentation
+├── src/
+│ ├── init.py # Makes src a Python package
+│ ├── main.py # Entry point: UI and event handling
+│ ├── app_logic.py # Core logic: add, edit, delete, search contacts
+│ └── database.py # SQLite database initialization and queries
+├── requirements.txt # Project dependencies
+└── README.md # Project documentation
+
+Notes
+
+Keep all .py files inside the src/ folder.
+
+Use python -m src.main to run locally — this ensures Python treats src as a package.
+
+The sqlite3 module is included with Python.
+
+Any additional packages your app uses should be listed in requirements.txt.
 
 ## Run the app
 
@@ -15,7 +27,7 @@ contact_book_app/
 Run as a desktop app:
 
 ```
-uv run python main.py
+uv run flet run main.py
 ```
 ```
 python main.py ## Run the app with python
@@ -23,7 +35,7 @@ python main.py ## Run the app with python
 Run as a web app: 
 
 ```
-uv run flet run main.py --web
+uv run flet run  main.py --web
 ```
 
 ### Poetry
@@ -55,6 +67,18 @@ For more details on running the app, refer to the [Getting Started Guide](https:
 ```
 flet build apk -v
 ```
+or
+```
+flet build apk --module-name src.main
+```
+
+To build an APK, you need:
+
+Flet installed (pip install flet)
+
+Android SDK installed and ANDROID_HOME environment variable set
+
+Developer Mode enabled on Windows
 
 For more details on building and signing `.apk` or `.aab`, refer to the [Android Packaging Guide](https://flet.dev/docs/publish/android/).
 

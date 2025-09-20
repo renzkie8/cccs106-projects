@@ -1,0 +1,53 @@
+# Core dependencies
+flet
+
+# Optional: only if you install any extra packages for database or UI
+# sqlite3 is part of Python standard library, so no need to include
+# Any other packages you use should be listed here, e.g.,
+# pandas
+# requests
+
+# Contact Book App
+
+A simple contact book application built with Python and Flet.
+
+## Project Structure
+
+contact_book_app/
+├── src/
+│   ├── main.py
+│   ├── app_logic.py
+│   └── database.py
+├── requirements.txt
+└── README.md
+
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone <your-repo-link>
+cd contact_book_app
+
+2. Install dependencies:
+
+pip install -r requirements.txt
+
+
+OR
+
+
+3.0 Running Locally
+
+Run the app using Python:
+
+python main.py
+
+3.1 Building for Android
+
+-Android SDK installed and ANDROID_HOME environment variable set
+-Developer Mode enabled on Windows
+run in cmd: flet build apk (within the folder)
+example: cd "C:\Users\Carl Renz\Documents\CCCS-106\workspace_colico\cccs106-projects\week4_labs\contact_book_app"
+
