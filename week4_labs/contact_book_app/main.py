@@ -15,22 +15,22 @@ def main(page: ft.Page):
 
     db_conn = init_db()
 
-    name_input = ft.TextField(label="Name", width=350)
-    phone_input = ft.TextField(label="Phone", width=350)
-    email_input = ft.TextField(label="Email", width=350)
+    name_input = ft.TextField(label="👤 Name", width=350)
+    phone_input = ft.TextField(label="📞 Phone", width=350)
+    email_input = ft.TextField(label="✉️ Email", width=350)
 
     inputs = (name_input, phone_input, email_input)
 
     contacts_list_view = ft.ListView(expand=True, spacing=10, auto_scroll=True)
 
     add_button = ft.ElevatedButton(
-        text="Add Contact",
+        text="➕ Add Contact",
         on_click=lambda e: add_contact(page, inputs, contacts_list_view, db_conn)
     )
 
     # Search bar
     search_input = ft.TextField(
-        label="Search contacts",
+        label="🔍 Search contacts",
         width=350,
         on_change=lambda e: search_contacts(page, e, contacts_list_view, db_conn)
     )

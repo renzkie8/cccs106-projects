@@ -12,7 +12,7 @@ def main(page: ft.Page):
     page.window.height = 700
     page.padding = 20
     page.scroll = ft.ScrollMode.AUTO
-
+    
     # Title
     title = ft.Text(
         "Personal Information Manager",
@@ -21,13 +21,13 @@ def main(page: ft.Page):
         text_align=ft.TextAlign.CENTER,
         color=ft.Colors.INDIGO_700
     )
-
+    
     # Input fields
     first_name = ft.TextField(label="First Name", width=280)
     last_name = ft.TextField(label="Last Name", width=280)
     age = ft.TextField(label="Age", width=100, keyboard_type=ft.KeyboardType.NUMBER)
     student_id = ft.TextField(label="Student ID", width=200)
-
+    
     # Dropdown for program
     program_dropdown = ft.Dropdown(
         label="Academic Program",
@@ -39,7 +39,7 @@ def main(page: ft.Page):
             ft.dropdown.Option("BSIS", "Bachelor of Science in Information Systems"),
         ]
     )
-
+    
     # Radio buttons for year level
     year_level = ft.RadioGroup(
         content=ft.Row([
@@ -49,7 +49,7 @@ def main(page: ft.Page):
             ft.Radio(value="4th", label="4th Year"),
         ])
     )
-
+    
     # Color picker (simulated with dropdown)
     favorite_color = ft.Dropdown(
         label="Favorite Color",
@@ -62,10 +62,9 @@ def main(page: ft.Page):
             ft.dropdown.Option("White"), ft.dropdown.Option("Gray"),
         ]
     )
-
-    # Hobbies
+    
     hobbies = ft.TextField(label="Hobbies/Interests", width=400, multiline=True)
-
+    
     # Output container
     output_container = ft.Container(
         content=ft.Text("Fill out the form and click 'Generate Profile' to see your information."),
@@ -74,7 +73,7 @@ def main(page: ft.Page):
         border_radius=10,
         width=550
     )
-
+    
     # Functions
     def generate_profile(e):
         try:
@@ -82,13 +81,13 @@ def main(page: ft.Page):
             if not all([first_name.value, last_name.value, age.value]):
                 show_error("Please fill in all required fields (Name and Age)!")
                 return
-
-            # Calculate birth year & graduation year
+            
+            # Calculate birth year
             current_year = datetime.now().year
             birth_year = current_year - int(age.value)
             graduation_year = current_year + (4 - int(year_level.value[0]) if year_level.value else 4)
-
-            # Build profile
+            
+            # Generate profile
             profile_content = ft.Column([
                 ft.Text("🎓 STUDENT PROFILE", size=20, weight=ft.FontWeight.BOLD, color=ft.Colors.INDIGO_700),
                 ft.Divider(),
@@ -105,15 +104,15 @@ def main(page: ft.Page):
                 ft.Text(f"📝 Profile generated on: {datetime.now().strftime('%B %d, %Y at %I:%M %p')}", 
                        size=12, color=ft.Colors.GREY_600),
             ])
-
+            
             output_container.content = profile_content
             page.update()
-
+            
         except ValueError:
             show_error("Please enter a valid age (number only)!")
         except Exception as ex:
             show_error(f"An error occurred: {str(ex)}")
-
+    
     def clear_form(e):
         first_name.value = ""
         last_name.value = ""
@@ -125,7 +124,7 @@ def main(page: ft.Page):
         hobbies.value = ""
         output_container.content = ft.Text("Form cleared. Fill out the information again.")
         page.update()
-
+    
     def show_error(message):
         error_dialog = ft.AlertDialog(
             title=ft.Text("Input Error"),
@@ -135,11 +134,11 @@ def main(page: ft.Page):
         page.dialog = error_dialog
         error_dialog.open = True
         page.update()
-
+    
     def close_error_dialog(dialog):
         dialog.open = False
         page.update()
-
+    
     # Buttons
     generate_btn = ft.ElevatedButton(
         "Generate Profile",
@@ -148,7 +147,7 @@ def main(page: ft.Page):
         color=ft.Colors.WHITE,
         width=150
     )
-
+    
     clear_btn = ft.ElevatedButton(
         "Clear Form",
         on_click=clear_form,
@@ -156,7 +155,7 @@ def main(page: ft.Page):
         color=ft.Colors.WHITE,
         width=150
     )
-
+    
     # Layout
     page.add(
         ft.Column([

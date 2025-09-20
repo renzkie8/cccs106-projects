@@ -3,7 +3,7 @@
 
 *Student Name:* Carl Renz Colico  
 *Student ID:* 2023-001234  
-*Section:* BSCS 1A  
+*Section:* BSCS 3A  
 *Date:* August 26, 2025  
 
 ---
