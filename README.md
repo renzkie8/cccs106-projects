@@ -13,20 +13,24 @@ Academic Year 2025-2026
 ### Week 1 Labs - Environment Setup and Python Basics
 - `week1_labs/hello_world.py` - Basic Python introduction
 - `week1_labs/basic_calculator.py` - Simple console calculator
-
 ### Week 2 Labs - Git and Flet GUI Development
 - `week2_labs/hello_flet.py` - First Flet GUI application
 - `week2_labs/personal_info_gui.py` - Enhanced personal information manager
 - `week2_labs/enhanced_calculator.py` - GUI calculator (coming soon)
 ### Week 3 Labs
-
+- `week3_labs/contact_book_cli.py` - Console-based Contact Book application
 ### Week 4 Labs
+- `week4_labs/contact_book_app/` - Console-based Contact Book application
+- `main.py` - Main Flet GUI application
+- `app_logic.py` - Handles adding, displaying, editing, deleting, and searching contacts
+- `database.py` - SQLite database integration for persistent contact storage
 ### Module 1 Final Project
 - `module1_final/` - Final integrated project (TBD)
 
 ## Technologies Used
 - **Python 3.8+** - Main programming language
 - **Flet 0.28.3** - GUI framework for cross-platform applications
+- **SQLite** - GUI framework for 
 - **Git & GitHub** - Version control and collaboration
 - **VS Code** - Integrated development environment
 
@@ -65,3 +69,16 @@ git commit -m "Update README.md with new application information"
 # Push the committed changes to the remote GitHub repository
 # Synchronizes your local main branch with the remote repository on GitHub
 # This makes your updated README.md visible to others and backs up your changes git push origin main
+
+### Running GUI Applications Week 3
+```cmd
+# Navigate to project directory
+cd week3_labs
+# Run applications
+python contact_book_cli.py
+
+### Running GUI Applications Week 4
+# Navigate to project directory
+cd week4_labs/contact_book_app
+# Run applications
+flet run main.py
