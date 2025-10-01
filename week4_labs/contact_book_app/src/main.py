@@ -21,8 +21,9 @@ def main(page: ft.Page):
 
     inputs = (name_input, phone_input, email_input)
 
-    contacts_list_view = ft.ListView(expand=True, spacing=10, auto_scroll=True)
-
+    #contacts_list_view = ft.ListView(expand=True, spacing=10, auto_scroll=True)
+    contacts_list_view = ft.Column(spacing=10)
+    
     add_button = ft.ElevatedButton(
         text="➕ Add Contact",
         on_click=lambda e: add_contact(page, inputs, contacts_list_view, db_conn)

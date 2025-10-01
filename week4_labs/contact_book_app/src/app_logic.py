@@ -9,42 +9,46 @@ def display_contacts(page, contacts_list_view, db_conn, contacts=None):
     if contacts is None:
         contacts = get_all_contacts_db(db_conn)
 
-    for contact in contacts:
-        contact_id, name, phone, email = contact
-
-        contact_card = ft.Card(
-            content=ft.Container(
-                content=ft.Column(
-                    [
-                        ft.Text(name, size=16, weight=ft.FontWeight.BOLD),
-                        ft.Row([ft.Icon(ft.Icons.PHONE), ft.Text(phone)]),
-                        ft.Row([ft.Icon(ft.Icons.EMAIL), ft.Text(email)]),
-                        ft.Row(
-                            [
-                                ft.IconButton(
-                                    icon=ft.Icons.EDIT,
-                                    tooltip="Edit",
-                                    on_click=lambda e, c=contact: open_edit_dialog(
-                                        page, c, db_conn, contacts_list_view
-                                    ),
-                                ),
-                                ft.IconButton(
-                                    icon=ft.Icons.DELETE,
-                                    tooltip="Delete",
-                                    on_click=lambda e, cid=contact_id: delete_contact(
-                                        page, cid, db_conn, contacts_list_view
-                                    ),
-                                ),
-                            ]
-                        ),
-                    ]
-                ),
-                padding=10,
-            ),
-            elevation=3,
+    if not contacts:
+        contacts_list_view.controls.append(
+            ft.Text("No contacts found.", italic=True, color="gray")
         )
+    else:
+        for contact in contacts:
+            contact_id, name, phone, email = contact
 
-        contacts_list_view.controls.append(contact_card)
+            contact_card = ft.Card(
+                content=ft.Container(
+                    content=ft.Column(
+                        [
+                            ft.Text(name, size=18, weight=ft.FontWeight.BOLD),
+                            ft.Row([ft.Icon(ft.Icons.PHONE, size=16), ft.Text(phone)], spacing=6),
+                            ft.Row([ft.Icon(ft.Icons.EMAIL, size=16), ft.Text(email)], spacing=6),
+                            ft.Row(
+                                [
+                                    ft.IconButton(
+                                        icon=ft.Icons.EDIT,
+                                        tooltip="Edit",
+                                        on_click=lambda e, c=contact: open_edit_dialog(page, c, db_conn, contacts_list_view)
+                                    ),
+                                    ft.IconButton(
+                                        icon=ft.Icons.DELETE,
+                                        tooltip="Delete",
+                                        on_click=lambda e, cid=contact_id: delete_contact(page, cid, db_conn, contacts_list_view)
+                                    ),
+                                ],
+                                alignment=ft.MainAxisAlignment.END,
+                            ),
+                        ]
+                    ),
+                    padding=10,
+                ),
+                elevation=3,
+                margin=5,
+                shape=ft.RoundedRectangleBorder(radius=12),
+            )
+
+            contacts_list_view.controls.append(contact_card)
 
     page.update()
 
@@ -89,10 +93,20 @@ def delete_contact(page, contact_id, db_conn, contacts_list_view):
     """Deletes a contact after confirmation and refreshes the list.""" 
 
     def yes_action(e): # ask the user for action click input if yes
-        delete_contact_db(db_conn, contact_id) 
-        display_contacts(page, contacts_list_view, db_conn)  # refresh list
-        dialog.open = False
-        page.update()
+        try:
+            delete_contact_db(db_conn, contact_id)
+            # show quick feedback
+            page.snack_bar = ft.SnackBar(ft.Text("Contact deleted"))
+            page.snack_bar.open = True
+            display_contacts(page, contacts_list_view, db_conn)
+        except Exception as exc:
+            # if something goes wrong, show message in snackbar and the console
+            page.snack_bar = ft.SnackBar(ft.Text(f"Delete failed: {exc}"))
+            page.snack_bar.open = True
+            print("delete error:", exc)
+        finally:
+            dialog.open = False
+            page.update()
 
     def no_action(e): # ask the user for action click input if no
         dialog.open = False
@@ -107,9 +121,7 @@ def delete_contact(page, contact_id, db_conn, contacts_list_view):
         ],
     )
 
-    page.dialog = dialog
-    dialog.open = True # accept 
-    page.update()
+    page.open(dialog)
 
 
 def open_edit_dialog(page, contact, db_conn, contacts_list_view): 
