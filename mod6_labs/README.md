@@ -78,7 +78,7 @@ Below are screenshots demonstrating various features of the app:
 |----------|-------------|
 | **5-Day Forecast** | ![5-Day Forecast](assets/5-day_forecast.png) |
 | **Current Location Weather** | ![Current Location Weather](assets/Current_location_weather.png) |
-| **Dynamic Background Color** | ![Dynamic Background Color](assets/Dynamic_Background_Color.png) |
+| **Dynamic Background Color** | ![Dynamic Background Color](assets/Dynamic Background Color.png) |
 | **Search History** | ![Search History](assets/search_history.png) |
 | **Temperature Unit Toggle** | ![Temperature Unit Toggle](assets/Temperature_Unit_Toggle.png) |
 
