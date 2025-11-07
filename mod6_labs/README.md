@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Weather Application - Module 6 Lab
 
 ## Student Information
