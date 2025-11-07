@@ -1,0 +1,40 @@
+<<<<<<< HEAD
+# .gitignore
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cache
+cache/
+*.cache
+
+# Build
+build/
+dist/
+*.egg-info/
+=======
+__pycache__/ 
+*.pyc 
+.vscode/ 
+*.log 
+.env 
+ccs106_env_lastname 
+>>>>>>> f4cc449bb60cda9c387660355486688f5aa6f9a0
