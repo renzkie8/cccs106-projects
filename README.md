@@ -24,8 +24,8 @@ Academic Year 2025-2026
 - `main.py` - Main Flet GUI application
 - `app_logic.py` - Handles adding, displaying, editing, deleting, and searching contacts
 - `database.py` - SQLite database integration for persistent contact storage
-### Module 1 Final Project
-- `module1_final/` - Final integrated project (TBD)
+###  Final Project
+- `module1_final/` - Pharmacy Management System (PMS) with collab group. Project is in this link: https://github.com/frnonato-lgtm/Pharmacy-Management-System.git
 
 ## Technologies Used
 - **Python 3.8+** - Main programming language
