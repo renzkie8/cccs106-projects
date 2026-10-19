@@ -14,7 +14,7 @@ print("Welcome to Python programming!")
 
 # Student information
 student_name = "Carl Renz Colico"
-student_id = "231002312"  
+student_id = "[STUDENT_ID_REMOVED]"  
 program = "Bachelor of Science in Computer Science"
 year_level = "1st Year"
 

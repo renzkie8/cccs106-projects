@@ -1,0 +1,60 @@
+# Available files
+
+- `.gitignore`
+- `DATA.md`
+- `README.md`
+- `VALIDATION.md`
+- `mod6_labs/.gitignore`
+- `mod6_labs/ORIGINAL_README.md`
+- `mod6_labs/README.md`
+- `mod6_labs/assets/5-day_forecast.png`
+- `mod6_labs/assets/Current_location_weather.png`
+- `mod6_labs/assets/Dynamic_Background_Color.png`
+- `mod6_labs/assets/Temperature_Unit_Toggle.png`
+- `mod6_labs/assets/icon.png`
+- `mod6_labs/assets/search_history.png`
+- `mod6_labs/assets/splash_android.png`
+- `mod6_labs/config.py`
+- `mod6_labs/features_ss/5-day forecast.png`
+- `mod6_labs/features_ss/Current_location_weather.png`
+- `mod6_labs/features_ss/Dynamic Background Color.png`
+- `mod6_labs/features_ss/Temperature Unit Toggle.png`
+- `mod6_labs/features_ss/search_history.png`
+- `mod6_labs/main.py`
+- `mod6_labs/pyproject.toml`
+- `mod6_labs/requirements.txt`
+- `mod6_labs/search_history.json`
+- `mod6_labs/src/main.py`
+- `mod6_labs/test_weather_service.py`
+- `mod6_labs/weather_service.py`
+- `week1_labs/LAB1_report.md`
+- `week1_labs/README.md`
+- `week1_labs/basic_calculator.py`
+- `week1_labs/hello_world.py`
+- `week2_labs/LAB2_report.md`
+- `week2_labs/README.md`
+- `week2_labs/enhanced_calculator.py`
+- `week2_labs/hello_flet.py`
+- `week2_labs/personal_info_gui.py`
+- `week3_labs/.gitignore`
+- `week3_labs/ORIGINAL_README.md`
+- `week3_labs/README.md`
+- `week3_labs/lab3_screenshots/login_failed.png`
+- `week3_labs/lab3_screenshots/login_successful.png`
+- `week3_labs/pyproject.toml`
+- `week3_labs/src/assets/icon.png`
+- `week3_labs/src/assets/splash_android.png`
+- `week3_labs/src/db_connection.py`
+- `week3_labs/src/main.py`
+- `week4_labs/contact_book_app/.gitignore`
+- `week4_labs/contact_book_app/ORIGINAL_README.md`
+- `week4_labs/contact_book_app/README.md`
+- `week4_labs/contact_book_app/__init__.py`
+- `week4_labs/contact_book_app/flet`
+- `week4_labs/contact_book_app/pyproject.toml`
+- `week4_labs/contact_book_app/requirements.txt`
+- `week4_labs/contact_book_app/src/app_logic.py`
+- `week4_labs/contact_book_app/src/assets/icon.png`
+- `week4_labs/contact_book_app/src/assets/splash_android.png`
+- `week4_labs/contact_book_app/src/database.py`
+- `week4_labs/contact_book_app/src/main.py`

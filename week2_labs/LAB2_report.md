@@ -83,15 +83,15 @@ Understood the importance of validation and event-driven programming.
 ## Screenshots
 
 - GitHub repository URL and screenshot of successful push
-- ![GitHub Repository Setup](lab2_screenshots/setting_up_env_git.png)  
-- ![Repository URL Push](lab2_screenshots/repository_URL_push.png)  
+- [Screenshot omitted from public portfolio to avoid exposing personal information.]  
+- [Screenshot omitted from public portfolio to avoid exposing personal information.]  
 
 - Screenshots of both GUI applications running 
-- ![Hello Flet Output](lab2_screenshots/hello_flet_output.png)  
-- ![Personal Info Output](lab2_screenshots/personal_info_output.png)
+- [Screenshot omitted from public portfolio to avoid exposing personal information.]  
+- [Screenshot omitted from public portfolio to avoid exposing personal information.]
 
 - GitHub repository URL showing complete commit history
-- ![Week 1 & 2 Repository Complete](lab2_screenshots/week1_2_URL_repository_complete.png)  
+- [Screenshot omitted from public portfolio to avoid exposing personal information.]  
 
 ### Git Repository
 

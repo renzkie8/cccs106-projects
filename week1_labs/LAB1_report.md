@@ -79,7 +79,7 @@ sniffio  1.3.1
 
 ## Screenshots
 
-- ![Environment Setup](lab1_screenshots/environment_setup.png)  
-- ![VS Code Setup](lab1_screenshots/vscode_setup.png)  
-- ![Hello World Output](lab1_screenshots/hello_world_output.png)  
-- ![Basic Calculator Output](lab1_screenshots/basic_calculator_output.png)
+- [Screenshot omitted from public portfolio to avoid exposing personal information.]  
+- [Screenshot omitted from public portfolio to avoid exposing personal information.]  
+- [Screenshot omitted from public portfolio to avoid exposing personal information.]  
+- [Screenshot omitted from public portfolio to avoid exposing personal information.]

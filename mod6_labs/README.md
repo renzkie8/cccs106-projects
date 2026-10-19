@@ -3,7 +3,7 @@
 
 ## Student Information
 - **Name**: Carl Renz M. Colico  
-- **Student ID**: 231002312  
+- **Student ID**: [STUDENT_ID_REMOVED]  
 - **Course**: CCCS 106 - Application Development  
 - **Section**: BSCS 3-A  
 
@@ -263,7 +263,7 @@ Academic Year 2025-2026
 
 ## Student Information
 - **Name:** Carl Renz M. Colico
-- **Student ID:** 231002312
+- **Student ID:** [STUDENT_ID_REMOVED]
 - **Program:** Bachelor of Science in Computer Science
 - **Section:** BSCS-3A
 
