@@ -1,7 +1,7 @@
 # Lab 2 Report: Git Version Control and Flet GUI Development
 
 *Student Name:* Carl Renz Colico  
-*Student ID:* 2023-001234  
+*Student ID:* [IDENTIFIER_REMOVED]  
 *Section:* BSCS 3A  
 *Date:* September 1, 2025  
 

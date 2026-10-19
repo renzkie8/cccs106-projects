@@ -5,7 +5,6 @@
 - `README.md`
 - `VALIDATION.md`
 - `mod6_labs/.gitignore`
-- `mod6_labs/ORIGINAL_README.md`
 - `mod6_labs/README.md`
 - `mod6_labs/assets/5-day_forecast.png`
 - `mod6_labs/assets/Current_location_weather.png`
@@ -37,7 +36,6 @@
 - `week2_labs/hello_flet.py`
 - `week2_labs/personal_info_gui.py`
 - `week3_labs/.gitignore`
-- `week3_labs/ORIGINAL_README.md`
 - `week3_labs/README.md`
 - `week3_labs/lab3_screenshots/login_failed.png`
 - `week3_labs/lab3_screenshots/login_successful.png`
@@ -47,7 +45,6 @@
 - `week3_labs/src/db_connection.py`
 - `week3_labs/src/main.py`
 - `week4_labs/contact_book_app/.gitignore`
-- `week4_labs/contact_book_app/ORIGINAL_README.md`
 - `week4_labs/contact_book_app/README.md`
 - `week4_labs/contact_book_app/__init__.py`
 - `week4_labs/contact_book_app/flet`

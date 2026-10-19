@@ -2,7 +2,7 @@
 # Lab 1 Report: Environment Setup and Python Basics
 
 *Student Name:* Carl Renz Colico  
-*Student ID:* 2023-001234  
+*Student ID:* [IDENTIFIER_REMOVED]  
 *Section:* BSCS 3A  
 *Date:* August 26, 2025  
 
