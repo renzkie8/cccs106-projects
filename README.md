@@ -2,7 +2,7 @@
 
 Year 3 Python and Flet course labs covering calculators, GUI forms, databases, contacts and weather.
 
-**Portfolio:** [Carl Renz Colico](https://github.com/renzkie8) · **Year:** Year 3
+**Portfolio:** [Carl Renz Colico](https://github.com/renzkie8) · **Year / Section:** Year 3 — BSCS 3-A
 
 ## Methodology
 
@@ -123,3 +123,7 @@ cd week4_labs/contact_book_app
 # Run applications
 flet run main.py
 
+
+## Application preservation
+
+Application source and dependency files match the pre-portfolio GitHub version. The introductory CCCS exercise retains a personal-ID placeholder; application logic is unchanged by that privacy substitution. Portfolio documentation, topics and ignore rules are separate additions.
